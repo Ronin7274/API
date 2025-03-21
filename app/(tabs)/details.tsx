@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
-import fetchcharacter from "../services/api";
-import { Image, Text, FlatList, View, StyleSheet  } from "react-native";
+import { fetchcharacter } from "../services/api";
+import { Image, Text, FlatList, View, StyleSheet, Button  } from "react-native";
 
 interface personagem{
     id:number;
@@ -33,6 +33,8 @@ export default function home() {
                     <View style={style.card}>
                         <Image source={{uri: item.images[0]}} style={style.Image}/>
                         <Text style={style.name}>{item.name}</Text>
+                        <Button title="ver detalhes"
+                        onPress={() => router.push('/personagem')}/>
                     </View>
                 )}
                 />

@@ -8,7 +8,7 @@ export default function Home(){
         <View style={{flex:1, justifyContent:"center", alignItems:"center"}}> 
             <Text>home</Text>
             <Button title="ver detalhes"
-            onPress={() => router.push('/home')}/>
+            onPress={() => router.push('/details')}/>
         </View>
     )
    
