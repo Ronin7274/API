@@ -13,3 +13,11 @@ export async function fetchcharacter()
         return [];
     }
 }
+
+// services/api.ts
+
+export async function fetchcharacterDetails(id: number) {
+    const response = await fetch(`https://api.dattebayo.com/character/${id}`);
+    const data = await response.json();
+    return data.character; // Supondo que o campo retornado seja 'character'
+}
